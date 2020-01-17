@@ -3,7 +3,7 @@ import java.lang.Math;
 
 public class Exec4
 {
-    public void main(String[] args) 
+    public static void main(String[] args) 
     {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter sides: ");
