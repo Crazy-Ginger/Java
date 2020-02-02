@@ -101,10 +101,11 @@ public class Vector
         }
     }
 
-    public static void main(String args[])
+    public static void main()
     {
         Vector a = new Vector(new double[] {2.0, 3.0, 4.0});
         System.out.println(a);
+        System.out.println("Running Vector now");
 
         // Vector b = new Vector(new double[] {4.0, 3.0, 2.0});
         // System.out.println(b.toString());
