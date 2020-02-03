@@ -78,18 +78,19 @@ public class Vector
         
         if (other instanceof Vector)
         {
-            try
+            Vector othV = (Vector) other;
+            if (this.params.length == othV.size())
             {
-                Class cls = other.getClass();
-                Method getLabel = cls.getMethod("size", null);
-                int length = (int)getLabel.invoke(other, null);
-                
-                if (length == this.size())
+                for (int i = 0; i < this.size(); i++)
                 {
-
+                    if (this.params[i] != othV.get(i))
+                    {
+                        return false;
+                    }
                 }
+                return true;
             }
-            catch(Exception e)
+            else
             {
                 return false;
             }
