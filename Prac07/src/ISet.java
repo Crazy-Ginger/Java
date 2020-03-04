@@ -1,3 +1,4 @@
+package tools;
 import java.util.Collection;
 
 public interface ISet <E extends Comparable<E>>
