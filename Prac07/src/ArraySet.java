@@ -7,6 +7,7 @@ public class ArraySet extends ISet<E>
     private ArrayList<E> elements;
     public ArraySet(E[] initial)
     {
+        super();
         this.elements = new ArrayList<E>();
         for (int i = 0; i < initial.length; i++)
         {
@@ -18,6 +19,7 @@ public class ArraySet extends ISet<E>
     }
     public ArraySet(E initial)
     {
+        super();
         this.elements = new ArrayList<E>(initial);
     }
 
@@ -56,13 +58,12 @@ public class ArraySet extends ISet<E>
         return false;
     }
     
-   
     public boolean remove(E remov)
     {
         this.elements.remove(remov);
         return true;
     }
-    public boolean removeAll(Collection<E> remov)
+    //public boolean removeAll(Collection<E> remov)
     {
         this.elements.removeAll(remov);
         return true;
