@@ -17,10 +17,10 @@ public class Prob1
         return resampled;
     }
 
-    public static int[] resample(int[] datapoints, int scale)
-    {
-        
-    }
+    // public int[] resample(int[] datapoints, int scale)
+    // {
+    //     return [1];
+    // }
 
     public static void main(String[] args)
     {
