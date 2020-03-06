@@ -32,7 +32,7 @@ public class ArraySet extends ISet<E>
         this.elements.add(add);
         return true;
     }
-    public boolean addAll(Collection<E> add)
+    /* public boolean addAll(Collection<E> add)
     {
         ArrayList<E> tmp = new ArrayList<E>();
         for (E elem : add)
@@ -45,7 +45,7 @@ public class ArraySet extends ISet<E>
         this.elements.addAll(tmp);
         return true;
     }
-
+ */
     public boolean contains(E check)
     {
         for (E elem : this.elements)
@@ -64,10 +64,10 @@ public class ArraySet extends ISet<E>
         return true;
     }
     //public boolean removeAll(Collection<E> remov)
-    {
+    /* {
         this.elements.removeAll(remov);
         return true;
-    }
+    } */
 
     public void clear()
     {
