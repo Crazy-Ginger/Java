@@ -5,7 +5,7 @@ import java.util.Map;
 public class FlowNetwork
 {
     public int UNVISITED = 0;
-    public int VISUTED = 1;
+    public int VISITED = 1;
     public int BEING_PROCESSED = 2;
     private Map<Vertex, List<Edge>> graph;
     private List<Vertex> verticies;
@@ -37,5 +37,38 @@ public class FlowNetwork
     public boolean contains(Edge e)
     {
         return this.graph.get(e.getSource()).contains(e);
+    }
+    public boolean contains(Vertex source, Vertex destinations)
+    {
+        if (verticies.contains(source))
+        {
+            for (Edges edge : graphs.get(source))
+            {
+                if (edge.getDest() == destinations)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public Vertex getVertex(String id)
+    {
+        for (Vertex vert: vertices)
+        {
+            if (vert.getId() == id)
+            {
+                return vert;
+            }
+        }
+        return null;
+    }
+    public void printBFS(Vertex start)
+    {
+
+    }
+    public void printDFS(Vertex start)
+    {
+
     }
 }
