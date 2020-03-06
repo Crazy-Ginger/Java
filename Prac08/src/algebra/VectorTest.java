@@ -16,8 +16,8 @@ import org.junit.rules.Timeout;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 
-public class VectorTest {
-
+public class VectorTest 
+{
 	@Test
 	public void testVector() {
 		double[] data = {3,4,5};
