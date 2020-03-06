@@ -32,8 +32,16 @@ public class Vertex
     {
         if (other instanceof Vertex)
         {
-            Vertex o
+            Vertex test = (Vertex) other;
+            if (test.getId() == this.getId())
+            {
+                return true;
+            }
         }
         return false;
+    }
+    public int hashcode()
+    {
+        return this.id.hashCode();
     }
 }
