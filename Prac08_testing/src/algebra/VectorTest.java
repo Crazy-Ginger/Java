@@ -1,20 +1,20 @@
 package algebra;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+/* import static org.junit.Assert.assertTrue; */
 
-import java.io.BufferedWriter;
+/* import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.Rule;
+import org.junit.Rule; */
 import org.junit.Test;
-import org.junit.rules.TestRule;
+/* import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.rules.Timeout;
 import org.junit.runner.Description;
-import org.junit.runners.model.Statement;
+import org.junit.runners.model.Statement; */
 
 public class VectorTest 
 {
