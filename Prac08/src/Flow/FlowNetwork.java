@@ -18,6 +18,7 @@ public class FlowNetwork
         }
         return false;
     }
+    
     public boolean addEdge(Vertex source, Vertex dest, int capacity)
     {
         Edge newEd = new Edge(source, dest, capacity);
@@ -30,19 +31,22 @@ public class FlowNetwork
         }
         return false;
     }
+
     public boolean contains(Vertex v)
     {
         return this.verticies.contains(v);
     }
+
     public boolean contains(Edge e)
     {
         return this.graph.get(e.getSource()).contains(e);
     }
+
     public boolean contains(Vertex source, Vertex destinations)
     {
         if (verticies.contains(source))
         {
-            for (Edges edge : graphs.get(source))
+            for (Edge edge : graph.get(source))
             {
                 if (edge.getDest() == destinations)
                 {
@@ -52,9 +56,10 @@ public class FlowNetwork
         }
         return false;
     }
+
     public Vertex getVertex(String id)
     {
-        for (Vertex vert: vertices)
+        for (Vertex vert : verticies)
         {
             if (vert.getId() == id)
             {
@@ -63,6 +68,7 @@ public class FlowNetwork
         }
         return null;
     }
+
     public void printBFS(Vertex start)
     {
 
