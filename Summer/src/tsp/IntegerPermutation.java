@@ -7,6 +7,10 @@ import java.util.Set;
 
 public class IntegerPermutation 
 {
+    IntegerPermutation()
+    {
+        
+    }
     public List<Integer> nextPermutation(List<Integer> sequence)
     {
         boolean escape = true;
@@ -67,6 +71,4 @@ public class IntegerPermutation
         }
         return allPerms;
     }
-
-
 }
