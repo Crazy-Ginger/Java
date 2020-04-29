@@ -10,6 +10,7 @@
 !.gitignore
 !*.java
 !*.txt
+!*.jar
 
 #Ignores Testing and make files
 Testing.java
