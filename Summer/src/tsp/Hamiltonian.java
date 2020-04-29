@@ -3,6 +3,7 @@ package tsp;
 //import tsp.IntegerPermutation;
 import java.util.List;
 import java.util.Set;
+import java.util.ArrayList;
 
 public class Hamiltonian 
 {
@@ -80,26 +81,61 @@ public class Hamiltonian
 
     public boolean isHamiltonianBacktrack(int[][] adjacencyMatrix)
     {
+        // new class to contain backtracking method, thanks java
+        class backtracker
+        {
+            private boolean backtrack(ArrayList<Integer> path, ArrayList<Integer> unused)
+            {
+                if (unused.size() == 0 && adjacencyMatrix[path.get(0)][path.get(path.size()-1)] != 0)
+                {
+                    return true;
+                }
+                if (path.size() == 0)
+                {
+                    for (int i = 0; i < unused.size(); i ++)
+                    {
+                        
+                    }
+                }
+                return false;
+            }
+        }
+
         if (!checkUndirected(adjacencyMatrix))
         {
             throw new IllegalArgumentException();
         }
 
-         //checks for unconnected nodes, if they exist graph cannot be hamiltonian
-         for (int i = 0; i < adjacencyMatrix.length; i++)
-         {
-             int sum = 0;
-             for (Integer summer : adjacencyMatrix[i])
-             {
-                 sum += summer;
-             }
-             if (sum == 0)
-             {
-                 return false;
-             }
-         }
+        //checks for unconnected nodes, if they exist graph cannot be hamiltonian
+        for (int i = 0; i < adjacencyMatrix.length; i++)
+        {
+            int sum = 0;
+            for (Integer summer : adjacencyMatrix[i])
+            {
+                sum += summer;
+            }
+            if (sum == 0)
+            {
+                return false;
+            }
+        }
 
+        //creates list of nodes to be passed to backtracker
+        ArrayList<Integer> nodes = new ArrayList<Integer>();
+        for (int i = 0; i < adjacencyMatrix.length; i ++)
+        {
+            nodes.add(i);
+        }
 
-        return false;
+        backtracker backs = new backtracker();
+
+        if (backs.backtrack(nodes, new ArrayList<Integer>()) == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
